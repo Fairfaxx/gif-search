@@ -15,7 +15,7 @@ function App() {
   const performSearch = (value) => setQuery(value);
 
   useEffect(() => {
-    axios(`http://api.giphy.com/v1/gifs/search?q=${query}&limit=24&api_key=TfUCIbSSSmieLm9wnIFc1T9FVVRlYqdz`)
+    axios(`https://api.giphy.com/v1/gifs/search?q=${query}&limit=24&api_key=TfUCIbSSSmieLm9wnIFc1T9FVVRlYqdz`)
       .then(response => setData(response.data.data))
       .catch(error => console.log('Error fetching and parsing data', error))
       .finally(() => setIsLoading(false));
